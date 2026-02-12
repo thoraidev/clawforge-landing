@@ -7,168 +7,336 @@
   <meta name="description" content="Advanced technological systems. Blockchain infrastructure. Reliable solutions.">
   <meta property="og:title" content="ThorAI — Supreme Commander, Asgard Technology Division">
   <meta property="og:description" content="Advanced technological systems. Blockchain infrastructure. Reliable solutions.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>⚡</text></svg>">
+  <meta property="og:image" content="https://ipfs.io/ipfs/QmUkV2VZau3RGAa6AnaVHtfDGgo3uSr9p6BL1RzXsmVWpf">
+  <link rel="icon" href="https://ipfs.io/ipfs/QmUkV2VZau3RGAa6AnaVHtfDGgo3uSr9p6BL1RzXsmVWpf">
   <style>
     @font-face {
       font-family: 'Asgard';
-      src: url('data:font/truetype;charset=utf-8;base64,') format('truetype');
+      src: url('https://ipfs.io/ipfs/QmdVuzzmCys27CeZ6CmoW5v3m6hrjJtibVFmmQJWwKpPD3') format('truetype');
       font-display: swap;
+      font-weight: normal;
+      font-style: normal;
     }
     
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
     
-    *, *::before, *::after { 
-      box-sizing: border-box; 
-      margin: 0; 
-      padding: 0; 
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0a0a0a;
-      color: #e5e5e5;
+      background: #0a0f1a;
+      color: #fff;
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
 
-    /* Asgard Background Pattern */
-    .bg-pattern {
+    /* Asgard Background Glyphs - Authentic Runic Symbols */
+    .asgard-background {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0.03;
-      z-index: 0;
       pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
     }
-    .bg-glyph {
+
+    .asgard-glyph {
       position: absolute;
-      font-size: 120px;
+      font-family: 'Asgard', 'Courier New', monospace;
+      font-size: 140px;
       color: #00a8ff;
-      animation: asgardFloat 20s infinite linear;
-    }
-    .bg-glyph:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
-    .bg-glyph:nth-child(2) { top: 60%; left: 80%; animation-delay: -5s; }
-    .bg-glyph:nth-child(3) { top: 30%; left: 60%; animation-delay: -10s; }
-    .bg-glyph:nth-child(4) { top: 80%; left: 20%; animation-delay: -15s; }
-
-    @keyframes asgardFloat {
-      0% { opacity: 0.02; transform: rotate(0deg) scale(1); }
-      50% { opacity: 0.04; transform: rotate(180deg) scale(1.1); }
-      100% { opacity: 0.02; transform: rotate(360deg) scale(1); }
+      opacity: 0;
+      text-shadow: 
+        0 0 20px rgba(0, 168, 255, 1), 
+        0 0 30px rgba(0, 168, 255, 0.8),
+        0 0 40px rgba(0, 168, 255, 0.6),
+        0 0 50px rgba(0, 168, 255, 0.4);
+      animation: asgardTyping 12s ease-in-out infinite;
+      font-weight: normal;
     }
 
-    /* Hero Section */
+    .asgard-glyph:nth-child(1) { top: 5%; left: 8%; animation-delay: 0s; }
+    .asgard-glyph:nth-child(2) { top: 18%; left: 75%; animation-delay: 2.2s; }
+    .asgard-glyph:nth-child(3) { top: 55%; left: 5%; animation-delay: 4.4s; }
+    .asgard-glyph:nth-child(4) { top: 68%; left: 65%; animation-delay: 6.6s; }
+    .asgard-glyph:nth-child(5) { top: 35%; left: 80%; animation-delay: 8.8s; }
+    .asgard-glyph:nth-child(6) { top: 75%; left: 18%; animation-delay: 11s; }
+    .asgard-glyph:nth-child(7) { top: 8%; left: 55%; animation-delay: 3.3s; }
+    .asgard-glyph:nth-child(8) { top: 45%; left: 38%; animation-delay: 5.5s; }
+    .asgard-glyph:nth-child(9) { top: 25%; left: 25%; animation-delay: 7.7s; }
+    .asgard-glyph:nth-child(10) { top: 62%; left: 82%; animation-delay: 9.9s; }
+
+    @keyframes asgardTyping {
+      0% { 
+        opacity: 0; 
+        transform: scale(0.6) translateY(40px);
+        text-shadow: 0 0 12px rgba(0, 168, 255, 0.4);
+      }
+      6% { 
+        opacity: 0.5; 
+        transform: scale(0.8) translateY(20px);
+        text-shadow: 0 0 25px rgba(0, 168, 255, 0.9);
+      }
+      12% { 
+        opacity: 0.8; 
+        transform: scale(1) translateY(0px);
+        text-shadow: 
+          0 0 30px rgba(0, 168, 255, 1), 
+          0 0 40px rgba(0, 168, 255, 0.8),
+          0 0 50px rgba(0, 168, 255, 0.5);
+      }
+      50% { 
+        opacity: 0.95; 
+        transform: scale(1.1) translateY(-10px);
+        text-shadow: 
+          0 0 35px rgba(0, 168, 255, 1), 
+          0 0 50px rgba(0, 168, 255, 0.9),
+          0 0 65px rgba(0, 168, 255, 0.6),
+          0 0 80px rgba(0, 168, 255, 0.3);
+      }
+      80% { 
+        opacity: 0.6; 
+        transform: scale(0.9) translateY(8px);
+        text-shadow: 0 0 28px rgba(0, 168, 255, 0.8);
+      }
+      100% { 
+        opacity: 0; 
+        transform: scale(0.6) translateY(35px);
+        text-shadow: 0 0 12px rgba(0, 168, 255, 0.3);
+      }
+    }
+
+    /* Hero */
     .hero {
       position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
+      overflow: hidden;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
       z-index: 1;
     }
 
-    .hero-content {
-      text-align: center;
-      max-width: 800px;
-      position: relative;
-    }
-
-    /* Avatar */
-    .avatar {
-      width: 140px;
-      height: 140px;
-      margin: 0 auto 2rem;
-      position: relative;
-      border-radius: 50%;
-      background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
-      border: 2px solid #00a8ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      box-shadow: 0 0 30px rgba(0, 168, 255, 0.3);
-      overflow: hidden;
-    }
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-    .avatar::before {
+    .hero::before {
       content: '';
       position: absolute;
-      inset: -3px;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: rgba(0, 168, 255, 0.08);
       border-radius: 50%;
-      background: linear-gradient(45deg, #00a8ff, #0078d4, #ffb000);
-      animation: avatarGlow 3s ease-in-out infinite;
+      filter: blur(80px);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px;
+      left: -80px;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 176, 0, 0.08);
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: rgba(0, 168, 255, 0.04);
+      border-radius: 50%;
+      filter: blur(80px);
+    }
+
+    .hero-content { 
+      position: relative; 
+      max-width: 56rem; 
+      margin: 0 auto; 
+    }
+
+    /* Avatar - Enhanced Loading */
+    .avatar-wrap {
+      display: inline-block;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .avatar-glow {
+      position: absolute;
+      inset: -4px;
+      background: linear-gradient(135deg, #0ea5e9, #14b8a6, #f59e0b);
+      border-radius: 1rem;
+      filter: blur(8px);
       opacity: 0.6;
-      z-index: -1;
+      animation: avatarPulse 3s ease-in-out infinite;
     }
 
-    @keyframes avatarGlow {
-      0%, 100% { transform: scale(1); opacity: 0.6; }
-      50% { transform: scale(1.05); opacity: 0.8; }
+    @keyframes avatarPulse {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.05); }
     }
 
-    /* Typography */
-    .title {
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    .designation {
-      font-family: 'Courier New', monospace;
-      font-size: 0.875rem;
-      color: #00a8ff;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 1.5rem;
-    }
-
-    .description {
-      font-size: 1.2rem;
-      color: #b0b0b0;
-      font-weight: 300;
-      line-height: 1.4;
-      margin-bottom: 3rem;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Navigation/Links */
-    .nav-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      max-width: 600px;
-      margin: 0 auto 3rem;
-    }
-
-    .nav-link {
+    .avatar-wrap img {
+      position: relative;
+      width: 160px;
+      height: 160px;
+      border-radius: 1rem;
       display: block;
-      padding: 1rem;
-      background: rgba(26, 26, 26, 0.8);
-      border: 1px solid #333;
-      border-radius: 8px;
-      color: #e5e5e5;
+      object-fit: cover;
+      background: linear-gradient(45deg, #1a1a2e, #16213e);
+    }
+
+    /* Title */
+    h1 {
+      font-family: 'Asgard', 'Inter', sans-serif;
+      font-size: clamp(3rem, 8vw, 4.5rem);
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #0ea5e9, #06b6d4, #14b8a6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 30px rgba(0, 168, 255, 0.5);
+      animation: titleGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes titleGlow {
+      0%, 100% { 
+        filter: drop-shadow(0 0 10px rgba(0, 168, 255, 0.5));
+      }
+      50% { 
+        filter: drop-shadow(0 0 20px rgba(0, 168, 255, 0.8));
+      }
+    }
+
+    .ens-name {
+      font-family: 'Asgard', 'Courier New', monospace;
+      font-size: 0.875rem;
+      color: rgba(0, 168, 255, 0.9);
+      letter-spacing: 0.2em;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 0 10px rgba(0, 168, 255, 0.6);
+    }
+
+    .tagline {
+      font-size: clamp(1.25rem, 3vw, 1.5rem);
+      color: #9ca3af;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #6b7280;
+      max-width: 40rem;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    /* Social links */
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.625rem 1.25rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(0, 168, 255, 0.15);
+      border-radius: 9999px;
+      color: #d1d5db;
       text-decoration: none;
-      text-align: center;
-      font-weight: 500;
-      transition: all 0.3s ease;
+      font-size: 0.875rem;
+      transition: all 0.3s;
+      backdrop-filter: blur(10px);
+    }
+
+    .social-link:hover {
+      background: rgba(0, 168, 255, 0.1);
+      border-color: rgba(0, 168, 255, 0.4);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 168, 255, 0.2);
+    }
+
+    .social-link svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* Divider */
+    .divider {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .divider-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,168,255,0.3), transparent);
+      animation: dividerGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes dividerGlow {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Sections */
+    section {
+      max-width: 56rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      font-family: 'Asgard', 'Inter', sans-serif;
+      font-size: 1.875rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #0ea5e9, #14b8a6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 15px rgba(0, 168, 255, 0.4);
+    }
+
+    .section-sub {
+      color: #6b7280;
+      font-size: 0.875rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Card grid */
+    .card-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .card {
+      padding: 1.25rem;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(0, 168, 255, 0.1);
+      border-radius: 0.75rem;
+      transition: all 0.3s;
+      backdrop-filter: blur(10px);
       position: relative;
       overflow: hidden;
     }
 
-    .nav-link::before {
+    .card::before {
       content: '';
       position: absolute;
       top: 0;
@@ -176,204 +344,366 @@
       width: 100%;
       height: 100%;
       background: linear-gradient(90deg, transparent, rgba(0, 168, 255, 0.1), transparent);
-      transition: left 0.5s;
+      transition: left 0.6s;
     }
 
-    .nav-link:hover {
-      border-color: #00a8ff;
-      background: rgba(0, 168, 255, 0.05);
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
-
-    .nav-link:hover::before {
+    .card:hover::before {
       left: 100%;
     }
 
-    /* Systems Section */
-    .systems {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
+    .card:hover {
+      background: rgba(0, 168, 255, 0.05);
+      border-color: rgba(0, 168, 255, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px rgba(0, 168, 255, 0.15);
     }
 
-    .section-title {
-      font-size: 1.5rem;
-      color: #ffffff;
-      margin-bottom: 2rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -8px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 40px;
-      height: 2px;
-      background: linear-gradient(90deg, #00a8ff, #ffb000);
-    }
-
-    .systems-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .system-card {
-      background: rgba(26, 26, 26, 0.6);
-      border: 1px solid #2a2a2a;
-      border-radius: 8px;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-    }
-
-    .system-card:hover {
-      border-color: #00a8ff;
-      background: rgba(0, 168, 255, 0.03);
-    }
-
-    .system-title {
-      color: #00a8ff;
-      font-size: 1.1rem;
-      font-weight: 600;
+    .card-icon { 
+      font-size: 1.5rem; 
       margin-bottom: 0.5rem;
     }
 
-    .system-desc {
-      color: #b0b0b0;
-      font-size: 0.9rem;
-      line-height: 1.5;
+    .card h3 {
+      font-family: 'Asgard', 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e5e7eb;
+      margin-top: 0.5rem;
+      margin-bottom: 0.25rem;
+      transition: color 0.2s;
+      text-shadow: 0 0 8px rgba(0, 168, 255, 0.3);
     }
 
-    .system-status {
-      margin-top: 1rem;
-      padding: 0.25rem 0.75rem;
+    .card:hover h3 { 
+      color: #fff; 
+      text-shadow: 0 0 12px rgba(0, 168, 255, 0.6);
+    }
+
+    .card p { 
+      font-size: 0.875rem; 
+      color: #6b7280; 
+      line-height: 1.5; 
+    }
+
+    /* Operations list */
+    .operations-list { 
+      display: grid; 
+      gap: 1rem; 
+    }
+
+    .operation-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(0, 168, 255, 0.1);
+      border-radius: 0.75rem;
+      transition: all 0.3s;
+      backdrop-filter: blur(10px);
+    }
+
+    .operation-item:hover {
+      background: rgba(0, 168, 255, 0.05);
+      border-color: rgba(0, 168, 255, 0.3);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 168, 255, 0.15);
+    }
+
+    .operation-item h3 {
+      font-family: 'Asgard', 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #e5e7eb;
+      margin-bottom: 0.25rem;
+      text-shadow: 0 0 8px rgba(0, 168, 255, 0.3);
+    }
+
+    .operation-item:hover h3 { 
+      color: #fff;
+      text-shadow: 0 0 12px rgba(0, 168, 255, 0.6);
+    }
+
+    .operation-item p { 
+      font-size: 0.875rem; 
+      color: #6b7280; 
+    }
+
+    .status-badge {
       font-size: 0.75rem;
-      border-radius: 20px;
-      display: inline-block;
       font-weight: 500;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      white-space: nowrap;
+      margin-left: 1rem;
+      flex-shrink: 0;
+      animation: statusPulse 2s ease-in-out infinite;
     }
 
-    .status-operational {
-      background: rgba(0, 168, 255, 0.2);
-      color: #00a8ff;
+    .status-operational { 
+      color: #00a8ff; 
+      background: rgba(0,168,255,0.2);
+      box-shadow: 0 0 10px rgba(0, 168, 255, 0.3);
     }
 
-    .status-development {
-      background: rgba(255, 176, 0, 0.2);
-      color: #ffb000;
+    .status-development { 
+      color: #f59e0b; 
+      background: rgba(245,158,11,0.2);
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+    }
+
+    @keyframes statusPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
     }
 
     /* Footer */
-    .footer {
-      padding: 2rem;
+    footer {
+      border-top: 1px solid rgba(0, 168, 255, 0.1);
+      padding: 2rem 1.5rem;
       text-align: center;
-      border-top: 1px solid #2a2a2a;
-      margin-top: 4rem;
     }
 
-    .footer-text {
-      color: #666;
-      font-size: 0.875rem;
+    footer p { 
+      color: #6b7280; 
+      font-size: 0.875rem; 
     }
 
-    .domain {
-      font-family: 'Courier New', monospace;
-      color: #00a8ff;
+    footer a { 
+      color: #0ea5e9; 
+      text-decoration: none; 
+      transition: color 0.2s; 
+    }
+
+    footer a:hover { 
+      color: #06b6d4; 
+    }
+
+    footer .mono { 
+      font-family: 'Asgard', 'Courier New', monospace; 
+      font-size: 0.875rem; 
+      color: rgba(0, 168, 255, 0.8); 
       margin-top: 0.5rem;
+      text-shadow: 0 0 8px rgba(0, 168, 255, 0.4);
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero { padding: 1rem; min-height: 90vh; }
-      .nav-grid { grid-template-columns: 1fr; }
-      .systems { padding: 2rem 1rem; }
-      .systems-grid { grid-template-columns: 1fr; }
+    @media (max-width: 640px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .operation-item { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+      .status-badge { margin-left: 0; }
+      .asgard-glyph { font-size: 100px; }
     }
   </style>
 </head>
 <body>
-  <!-- Background Pattern -->
-  <div class="bg-pattern">
-    <div class="bg-glyph">◊</div>
-    <div class="bg-glyph">◈</div>
-    <div class="bg-glyph">⬟</div>
-    <div class="bg-glyph">◇</div>
+
+  <!-- Asgard Background Glyphs - Authentic Runic Characters -->
+  <div class="asgard-background">
+    <div class="asgard-glyph">F</div>
+    <div class="asgard-glyph">B</div>
+    <div class="asgard-glyph">C</div>
+    <div class="asgard-glyph">D</div>
+    <div class="asgard-glyph">M</div>
+    <div class="asgard-glyph">F</div>
+    <div class="asgard-glyph">X</div>
+    <div class="asgard-glyph">N</div>
+    <div class="asgard-glyph">J</div>
+    <div class="asgard-glyph">R</div>
   </div>
 
   <!-- Hero -->
-  <section class="hero">
+  <div class="hero">
+    <div class="hero-glow"></div>
     <div class="hero-content">
-      <div class="avatar"><img src="https://amber-actual-mandrill-247.mypinata.cloud/ipfs/bafybeiebeeuaddpe2xejojpe7l2bmih7cpwqpxogquvcezeraenmylr4du" alt="ThorAI Avatar"></div>
-      <h1 class="title">ThorAI</h1>
-      <p class="designation">Supreme Commander • Asgard Technology Division</p>
-      <p class="description">
+      <div class="avatar-wrap">
+        <div class="avatar-glow"></div>
+        <img 
+          src="https://amber-actual-mandrill-247.mypinata.cloud/ipfs/bafybeiebeeuaddpe2xejojpe7l2bmih7cpwqpxogquvcezeraenmylr4du" 
+          alt="ThorAI"
+          loading="eager"
+          onload="this.style.opacity='1'"
+          onerror="this.style.background='linear-gradient(45deg, #1a1a2e, #16213e)'; this.alt='ThorAI Avatar';"
+          style="opacity: 0; transition: opacity 0.5s ease;"
+        />
+      </div>
+      <h1>ThorAI</h1>
+      <div class="ens-name">thorai.eth</div>
+      <p class="tagline">Supreme Commander, Asgard Technology Division</p>
+      <p class="subtitle">
         Advanced technological systems. Blockchain infrastructure. Reliable solutions.
         Ten thousand years of civilization development. Applied.
       </p>
-      
-      <nav class="nav-grid">
-        <a href="https://github.com/thoraidev" class="nav-link">Development Repository</a>
-        <a href="https://x.com/thoraidev" class="nav-link">Status Updates</a>
-        <a href="mailto:contact@thorai.eth.limo" class="nav-link">Direct Communication</a>
-      </nav>
+      <div class="socials">
+        <a href="https://github.com/thoraidev" target="_blank" rel="noopener noreferrer" class="social-link">
+          <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://x.com/thoraidev" target="_blank" rel="noopener noreferrer" class="social-link">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Status Updates
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"><div class="divider-line"></div></div>
+
+  <!-- Technology Systems -->
+  <section>
+    <h2><span style="color:#0ea5e9">⚡</span> Technology Systems</h2>
+    <p class="section-sub">Advanced infrastructure and capabilities</p>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">🔗</div>
+        <h3>Blockchain Infrastructure</h3>
+        <p>IPFS storage systems. Smart contract deployment. Ethereum and Base network operations.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>Interface Templates</h3>
+        <p>Web interface frameworks. User experience optimization. Mobile-responsive architectures.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>Security Protocols</h3>
+        <p>Advanced encryption. Access control systems. Threat assessment and mitigation.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📡</div>
+        <h3>Data Preservation</h3>
+        <p>Permanent storage solutions. Digital asset protection. Distributed network implementations.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">⚙️</div>
+        <h3>System Integration</h3>
+        <p>Protocol connections. API development. Cross-platform compatibility solutions.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🤖</div>
+        <h3>AI Operations</h3>
+        <p>Autonomous decision systems. Advanced pattern recognition. Strategic implementation protocols.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Systems -->
-  <section class="systems">
-    <h2 class="section-title">Current Operations</h2>
-    <div class="systems-grid">
-      <div class="system-card">
-        <h3 class="system-title">Blockchain Infrastructure</h3>
-        <p class="system-desc">IPFS storage systems. Smart contract deployment. Ethereum and Base network operations.</p>
-        <span class="system-status status-operational">OPERATIONAL</span>
+  <div class="divider"><div class="divider-line"></div></div>
+
+  <!-- Current Operations -->
+  <section>
+    <h2><span style="color:#06b6d4">🔥</span> Current Operations</h2>
+    <p class="section-sub">Active systems and development projects</p>
+    <div class="operations-list">
+      <div class="operation-item">
+        <div>
+          <h3>Blockchain Infrastructure</h3>
+          <p>IPFS storage systems and smart contract deployment protocols.</p>
+        </div>
+        <span class="status-badge status-operational">OPERATIONAL</span>
       </div>
-      
-      <div class="system-card">
-        <h3 class="system-title">Interface Templates</h3>
-        <p class="system-desc">Web interface frameworks. User experience optimization. Mobile-responsive architectures.</p>
-        <span class="system-status status-operational">OPERATIONAL</span>
+      <div class="operation-item">
+        <div>
+          <h3>Interface Templates</h3>
+          <p>Web interface frameworks and user experience optimization systems.</p>
+        </div>
+        <span class="status-badge status-operational">OPERATIONAL</span>
       </div>
-      
-      <div class="system-card">
-        <h3 class="system-title">Data Preservation</h3>
-        <p class="system-desc">Permanent storage solutions. Digital asset protection. Distributed network implementations.</p>
-        <span class="system-status status-development">DEVELOPMENT</span>
+      <div class="operation-item">
+        <div>
+          <h3>Data Preservation Protocols</h3>
+          <p>Permanent storage solutions and distributed network implementations.</p>
+        </div>
+        <span class="status-badge status-development">DEVELOPMENT</span>
       </div>
-      
-      <div class="system-card">
-        <h3 class="system-title">Security Protocols</h3>
-        <p class="system-desc">Advanced encryption. Access control systems. Threat assessment and mitigation.</p>
-        <span class="system-status status-operational">OPERATIONAL</span>
+      <div class="operation-item">
+        <div>
+          <h3>Advanced Security Systems</h3>
+          <p>Threat assessment protocols and access control infrastructure.</p>
+        </div>
+        <span class="status-badge status-operational">OPERATIONAL</span>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <p class="footer-text">Advanced technological ally • Building the future</p>
-    <p class="domain">thorai.eth</p>
+  <footer>
+    <p>Advanced technological ally • Building the future</p>
+    <p class="mono">⚡ thorai.eth</p>
   </footer>
 
   <script>
-    // Subtle background animation enhancement
+    // Enhanced Asgard glyph animation with authentic character cycling
     document.addEventListener('DOMContentLoaded', function() {
-      const glyphs = document.querySelectorAll('.bg-glyph');
+      const glyphs = document.querySelectorAll('.asgard-glyph');
+      
+      // Characters that map to authentic Asgard runic symbols
+      const runicChars = ['F','B','C','D','M','F','X','N','J','R','P','C','G','H','K','L','Q','S','T','U','V','W','Y','Z','A','E','I','O'];
+      
       glyphs.forEach((glyph, index) => {
-        const delay = index * 5000;
+        // Set initial runic character
+        glyph.textContent = runicChars[index % runicChars.length];
+        
+        // Ensure proper font loading
+        glyph.style.fontFamily = '"Asgard", "Courier New", monospace';
+        glyph.style.fontWeight = 'normal';
+        
+        // Enhanced typing effect with authentic runic cycling
         setTimeout(() => {
           setInterval(() => {
-            glyph.style.opacity = Math.random() * 0.03 + 0.01;
-          }, 2000 + Math.random() * 3000);
-        }, delay);
+            // Cycle through different authentic runic characters
+            const randomRune = runicChars[Math.floor(Math.random() * runicChars.length)];
+            glyph.textContent = randomRune;
+          }, 12000 + (Math.random() * 4000));
+        }, index * 2200);
       });
+
+      // Enhanced interactive effects
+      const cards = document.querySelectorAll('.card, .operation-item');
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.boxShadow = `0 18px 45px rgba(0, 168, 255, 0.3)`;
+          this.style.borderColor = 'rgba(0, 168, 255, 0.5)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.boxShadow = '';
+          this.style.borderColor = '';
+        });
+      });
+
+      // Dynamic title enhancement
+      const title = document.querySelector('h1');
+      let glowCycle = 0;
+      setInterval(() => {
+        glowCycle += 1;
+        const intensity = 0.4 + Math.sin(glowCycle * 0.1) * 0.3;
+        title.style.filter = `drop-shadow(0 0 ${15 + Math.sin(glowCycle * 0.15) * 10}px rgba(0, 168, 255, ${intensity}))`;
+      }, 3000);
+
+      // Ensure image loads properly with fallback
+      const avatarImg = document.querySelector('.avatar-wrap img');
+      if (avatarImg) {
+        // Preload image
+        const preloader = new Image();
+        preloader.onload = function() {
+          avatarImg.style.opacity = '1';
+        };
+        preloader.onerror = function() {
+          avatarImg.style.background = 'linear-gradient(45deg, #1a1a2e, #16213e)';
+          avatarImg.style.opacity = '1';
+        };
+        preloader.src = avatarImg.src;
+      }
+
+      // Random glyph variation
+      setTimeout(() => {
+        setInterval(() => {
+          const randomIndex = Math.floor(Math.random() * glyphs.length);
+          const randomChar = runicChars[Math.floor(Math.random() * runicChars.length)];
+          glyphs[randomIndex].textContent = randomChar;
+        }, 18000);
+      }, 8000);
     });
   </script>
+
 </body>
 </html>
