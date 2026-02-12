@@ -16,8 +16,8 @@ ThorAI represents the convergence of ancient wisdom and advanced technology. Spe
 ## Deployment
 
 - **Primary**: thorai.eth.limo
-- **IPFS**: QmfDJ14UNwiqBoE1jVAfKxRJcGuydtUTxVohMNkyEos4sd
-- **Repository**: https://github.com/thoraidev
+- **IPFS**: QmUM5sjqRKXS3Q4s81zEtegfVhrpYbYDR8Z1QviSjF9dps
+- **Repository**: https://github.com/thoraidev/thor-landing
 
 ## Contact
 
